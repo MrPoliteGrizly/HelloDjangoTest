@@ -1,10 +1,8 @@
 from __future__ import unicode_literals
-
 from django.db import models
-
 import datetime
-
 from django.utils import timezone 
+
 
 # Create your models here.
 class Question(models.Model):
@@ -17,7 +15,7 @@ class Question(models.Model):
         
     
 class Choise(models.Model):
-    question_text = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choise_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
     def __str__(self):
