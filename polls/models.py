@@ -21,7 +21,9 @@ class Choise(models.Model):
     def __str__(self):
         return self.choise_text
 
-
-    
-    
+class test(models.Model):
+    text = models.CharField(max_length=100)
+    date_test = models.DateTimeField("Test published")
+    def __str__(self):
+        return self.text
 
